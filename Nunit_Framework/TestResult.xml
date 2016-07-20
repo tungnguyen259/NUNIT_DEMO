@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.4.1.0" clr-version="4.0.30319.42000" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:46Z" duration="76.353977">
+  <command-line><![CDATA["C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe"  bin\Debug\Nunit_Framework.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1006" name="Nunit_Framework.dll" fullname="F:\New folder\Nunit_Git_TDD_Project\Nunit_Framework\bin\Debug\Nunit_Framework.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:46Z" duration="76.280645" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.4.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="F:\New folder\Nunit_Git_TDD_Project\Nunit_Framework" machine-name="LGDN15030-W7D01" user="TungN" user-domain="STI2K" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="F:\New folder\Nunit_Git_TDD_Project\Nunit_Framework" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="10352" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1007" name="Nunit_Framework" fullname="Nunit_Framework" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:46Z" duration="76.260239" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="0-1008" name="Testcases" fullname="Nunit_Framework.Testcases" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:46Z" duration="76.258193" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="0-1010" name="Articles" fullname="Nunit_Framework.Testcases.Articles" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:25Z" duration="55.038966" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1004" name="ArticlesPage_001" fullname="Nunit_Framework.Testcases.Articles.ArticlesPage_001" classname="Nunit_Framework.Testcases.Articles.ArticlesPage_001" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:25Z" duration="55.032872" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-case id="0-1005" name="TC003_CreateAnArticle" fullname="Nunit_Framework.Testcases.Articles.ArticlesPage_001.TC003_CreateAnArticle" methodname="TC003_CreateAnArticle" classname="Nunit_Framework.Testcases.Articles.ArticlesPage_001" runstate="Runnable" seed="1754532520" result="Passed" start-time="2016-07-19 09:49:03Z" end-time="2016-07-19 09:49:24Z" duration="20.805463" asserts="0">
+              <output><![CDATA[Results has been saved in: F:\New folder\Nunit_Git_TDD_Project\TestResults\2016-07-19\TC003_CreateAnArticle\]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1000" name="BaseTestMethods" fullname="Nunit_Framework.Testcases.BaseTestMethods" classname="Nunit_Framework.Testcases.BaseTestMethods" runstate="Runnable" testcasecount="0" result="Passed" start-time="2016-07-19 09:49:25Z" end-time="2016-07-19 09:49:25Z" duration="0.000099" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" />
+        <test-suite type="TestSuite" id="0-1009" name="LoginPage" fullname="Nunit_Framework.Testcases.LoginPage" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-07-19 09:48:30Z" end-time="2016-07-19 09:49:46Z" duration="76.253245" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1001" name="LoginPage_001" fullname="Nunit_Framework.Testcases.LoginPage.LoginPage_001" classname="Nunit_Framework.Testcases.LoginPage.LoginPage_001" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-07-19 09:49:25Z" end-time="2016-07-19 09:49:46Z" duration="21.213088" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-case id="0-1002" name="TC001_LoginToJoomlaWithInValidAccount" fullname="Nunit_Framework.Testcases.LoginPage.LoginPage_001.TC001_LoginToJoomlaWithInValidAccount" methodname="TC001_LoginToJoomlaWithInValidAccount" classname="Nunit_Framework.Testcases.LoginPage.LoginPage_001" runstate="Runnable" seed="791413704" result="Passed" start-time="2016-07-19 09:49:35Z" end-time="2016-07-19 09:49:38Z" duration="3.661271" asserts="0">
+              <output><![CDATA[Results has been saved in: F:\New folder\Nunit_Git_TDD_Project\TestResults\2016-07-19\TC001_LoginToJoomlaWithInValidAccount\]]></output>
+            </test-case>
+            <test-case id="0-1003" name="TC002_LoginToJoomlaWithValidAccount" fullname="Nunit_Framework.Testcases.LoginPage.LoginPage_001.TC002_LoginToJoomlaWithValidAccount" methodname="TC002_LoginToJoomlaWithValidAccount" classname="Nunit_Framework.Testcases.LoginPage.LoginPage_001" runstate="Runnable" seed="1602881660" result="Passed" start-time="2016-07-19 09:49:38Z" end-time="2016-07-19 09:49:43Z" duration="4.434230" asserts="0">
+              <output><![CDATA[Results has been saved in: F:\New folder\Nunit_Git_TDD_Project\TestResults\2016-07-19\TC002_LoginToJoomlaWithValidAccount\]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
