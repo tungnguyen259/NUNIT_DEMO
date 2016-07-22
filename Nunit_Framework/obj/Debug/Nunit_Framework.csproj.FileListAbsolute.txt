@@ -45,3 +45,4 @@ F:\GITHUB_PROJECT\Nunit_Git_TDD_Project\NUNIT_DEMO\NUNIT_DEMO\Nunit_Framework\bi
 F:\GITHUB_PROJECT\Nunit_Git_TDD_Project\NUNIT_DEMO\NUNIT_DEMO\Nunit_Framework\bin\Debug\WebDriver.Support.xml
 F:\GITHUB_PROJECT\Nunit_Git_TDD_Project\NUNIT_DEMO\NUNIT_DEMO\Nunit_Framework\obj\Debug\Nunit_Framework.dll
 F:\GITHUB_PROJECT\Nunit_Git_TDD_Project\NUNIT_DEMO\NUNIT_DEMO\Nunit_Framework\obj\Debug\Nunit_Framework.pdb
+F:\GITHUB_PROJECT\Nunit_Git_TDD_Project\NUNIT_DEMO\NUNIT_DEMO\Nunit_Framework\obj\Debug\Nunit_Framework.csprojResolveAssemblyReference.cache

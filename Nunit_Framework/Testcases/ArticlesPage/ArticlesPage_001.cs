@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+﻿/*using NUnit.Framework;
 using Nunit_Framework.PageActions;
 using Nunit_Framework.PageActions.MainPage;
 using System;
@@ -46,4 +46,4 @@ namespace Nunit_Framework.Testcases.Articles
             PageActions.Pages.ManageArticlePage.DeleteArticle(ArticleTitle);
         }
     }
-}
+}*/
