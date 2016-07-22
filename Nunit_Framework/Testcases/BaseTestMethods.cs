@@ -51,6 +51,19 @@ namespace Nunit_Framework.Testcases
         {
             extentReportSummary.EndTest(testSummary);
             extentReportSummary.Flush();
+
+            // For Jenkins report
+            var source = Path.Combine(resultSummaryDirectory, reportSummaryName);
+            var targetPath = Path.Combine(Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).Parent.Parent.Parent.FullName, "TestResults", "JenkinsReport");
+            var destination = Path.Combine(targetPath, "TestSummaryJenkins.html");
+
+            if (!Directory.Exists(targetPath))
+            {
+                Directory.CreateDirectory(targetPath);
+            }
+            File.Copy(source, destination, true);
+
+            //Pos-condition
             BrowserManager.DeleteAllCookies();
             BrowserManager.CloseBrowser();
         }
@@ -65,7 +78,6 @@ namespace Nunit_Framework.Testcases
             resultDirectory += "\\";
             reportName = TestContext.CurrentContext.Test.MethodName + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".html";
             screenshotName = TestContext.CurrentContext.Test.MethodName + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
-            //screenshotName = TestContext.CurrentContext.Test.MethodName + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
             extentReports = new ExtentReports(resultDirectory + reportName, true);
             test = extentReports.StartTest(TestContext.CurrentContext.Test.MethodName, "");
@@ -124,6 +136,7 @@ namespace Nunit_Framework.Testcases
 
                 string screenshotFilePath = Path.Combine(resultDirectory, screenshotName);
                 SuperUtility.SaveScreenshot(BrowserManager.Browser, screenshotFilePath, System.Drawing.Imaging.ImageFormat.Png);
+                string aaa = Path.GetFileNameWithoutExtension(screenshotFilePath);
             }
             catch (Exception ex)
             {

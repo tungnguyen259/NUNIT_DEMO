@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Fenton.Selenium.SuperDriver, Version=0.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Fenton.Selenium.SuperDriver, Version=0.1.7.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\libs\Fenton.Selenium.SuperDriver.dll</HintPath>
     </Reference>

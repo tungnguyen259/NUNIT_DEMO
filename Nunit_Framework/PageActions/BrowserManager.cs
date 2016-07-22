@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading;
 
 namespace Nunit_Framework.PageActions
 {
@@ -92,7 +93,7 @@ namespace Nunit_Framework.PageActions
                                 {
                                     EdgeOptions options = new EdgeOptions();
                                     options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
-                                    context.Add("Driver", (IWebDriver)new EdgeDriver(options));
+                                    context.Add("Driver", (IWebDriver)new EdgeDriver());
                                 }
                                 break;
                             }
@@ -109,12 +110,13 @@ namespace Nunit_Framework.PageActions
         }
         private static IList<IWebDriver> GetDriverSuiteGrid()
         {
+            EdgeOptions options = new EdgeOptions();
+            options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
             var uri = new Uri(ConfigurationManager.AppSettings["SeleniumHubUrl"]);
             // Allow some degree of parallelism when creating drivers, which can be slow
             IList<IWebDriver> drivers = new List<Func<IWebDriver>>
             {
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Chrome()); },
-                () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Firefox()); },
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.InternetExplorer()); },
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Edge()); },
             }.AsParallel().Select(d => d()).ToList();
@@ -122,8 +124,6 @@ namespace Nunit_Framework.PageActions
         }
         private static IList<IWebDriver> GetDriverSuiteNonGrid()
         {
-            EdgeOptions options = new EdgeOptions();
-            options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
             IList<IWebDriver> drivers = new List<Func<IWebDriver>>
             {
                 () =>  { return (IWebDriver)new ChromeDriver(); },
@@ -141,6 +141,15 @@ namespace Nunit_Framework.PageActions
         public static void MaximizeWindow()
         {
             Browser.Manage().Window.Maximize();
+            //string s = (string)((IJavaScriptExecutor)Browser).ExecuteScript("return navigator.userAgent;");
+            //string s1 = Browser.GetType().Name.ToString();
+            //IList<string> s = GetBrowserName();
+            var random = new Random();
+            string[] wordList = { "a","b"};
+            string[] wordsToTest = Enumerable.Range(0, 1000000)
+                .Select(i => wordList[random.Next(0, wordList.Length)])
+                .ToArray();
+
         }
 
         public static void DeleteAllCookies()
@@ -152,6 +161,7 @@ namespace Nunit_Framework.PageActions
         {
             Browser.Close();
             context.Clear();
+            
         }
     }
 }

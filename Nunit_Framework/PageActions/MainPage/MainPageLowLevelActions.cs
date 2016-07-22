@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System.Threading;
 
 namespace Nunit_Framework.PageActions.MainPage
 {
@@ -9,7 +10,7 @@ namespace Nunit_Framework.PageActions.MainPage
             int pos = path.IndexOf("/");
             string[] count = path.Split('/');
             int total = count.Length;
-
+            Thread.Sleep(2000);
             ClickOnElement(count[0]);
 
             if (total == 3)
