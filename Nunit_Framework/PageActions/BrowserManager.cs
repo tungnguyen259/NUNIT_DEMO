@@ -1,6 +1,7 @@
 ﻿using Fenton.Selenium.SuperDriver;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
@@ -44,6 +45,16 @@ namespace Nunit_Framework.PageActions
                                     context.Add("Driver", new RemoteWebDriver(uri, DesiredCapabilities.Chrome()));
                                 break;
                             }
+                        case "Edge":
+                            {
+                                if (context.Count == 0)
+                                {
+                                    EdgeOptions options = new EdgeOptions();
+                                    options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
+                                    context.Add("Driver", new RemoteWebDriver(uri, DesiredCapabilities.Edge()));
+                                }
+                                break;
+                            }
                         default:
                             {
                                 if (context.Count == 0)
@@ -75,6 +86,16 @@ namespace Nunit_Framework.PageActions
                                     context.Add("Driver", (IWebDriver)new ChromeDriver());
                                 break;
                             }
+                        case "Edge":
+                            {
+                                if (context.Count == 0)
+                                {
+                                    EdgeOptions options = new EdgeOptions();
+                                    options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
+                                    context.Add("Driver", (IWebDriver)new EdgeDriver(options));
+                                }
+                                break;
+                            }
                         default:
                             {
                                 if (context.Count == 0)
@@ -95,11 +116,14 @@ namespace Nunit_Framework.PageActions
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Chrome()); },
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Firefox()); },
                 () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.InternetExplorer()); },
+                () =>  { return new RemoteWebDriver(uri, DesiredCapabilities.Edge()); },
             }.AsParallel().Select(d => d()).ToList();
             return drivers;
         }
         private static IList<IWebDriver> GetDriverSuiteNonGrid()
         {
+            EdgeOptions options = new EdgeOptions();
+            options.PageLoadStrategy = EdgePageLoadStrategy.Eager;
             IList<IWebDriver> drivers = new List<Func<IWebDriver>>
             {
                 () =>  { return (IWebDriver)new ChromeDriver(); },

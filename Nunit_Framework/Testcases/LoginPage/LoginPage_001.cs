@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using Nunit_Framework.PageActions;
-using System.Diagnostics;
 
 namespace Nunit_Framework.Testcases.LoginPage
 {

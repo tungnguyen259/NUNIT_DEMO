@@ -1,4 +1,4 @@
-﻿/*using NUnit.Framework;
+﻿using NUnit.Framework;
 using Nunit_Framework.PageActions;
 using Nunit_Framework.PageActions.MainPage;
 using System;
@@ -38,7 +38,7 @@ namespace Nunit_Framework.Testcases.Articles
             stepLogging("10. Click on 'Save & Close' icon of the top right toolbar");
             PageActions.Pages.CreateEditArticlePage.ClickCreateEditArticlePageButton("Save & Close");
 
-            stepLogging("VP: 11. Verify the article is saved successfully");
+            stepLogging("11. Verify the article is saved successfully");
             PageActions.Pages.ManageArticlePage.IsArticleSuccessfullyCreatedMessageDisplayed();
             PageActions.Pages.ManageArticlePage.IsArticleDisplayed(ArticleTitle);
 
@@ -46,4 +46,4 @@ namespace Nunit_Framework.Testcases.Articles
             PageActions.Pages.ManageArticlePage.DeleteArticle(ArticleTitle);
         }
     }
-}*/
+}
